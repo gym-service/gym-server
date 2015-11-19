@@ -19,7 +19,7 @@ python manage.py migrate_schemas --shared
 ```
 
 
-## django dev server
+## DJANGO DEV SERVER
 
 per sviluppo in locale usare hexxie.com come dominio (... punta a localhost ma permette di usare sottodomini ...)
 
