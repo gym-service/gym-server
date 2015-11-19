@@ -10,3 +10,6 @@ class Client(TenantMixin):
 
     # default true, schema will be automatically created and synced when it is saved
     auto_create_schema = True
+
+    def __unicode__(self):
+        return u'%s - %s' % (self.domain_url, self.schema_name)
