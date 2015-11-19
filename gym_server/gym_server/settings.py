@@ -59,7 +59,7 @@ INSTALLED_APPS = list(SHARED_APPS) + [app for app in TENANT_APPS if app not in S
 
 MIDDLEWARE_CLASSES = [
     # django tenant taking control of our middleware ..
-    'django_tenants.middleware.TenantMiddleware',
+    'tenant_schemas.middleware.TenantMiddleware',
 
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -148,3 +148,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 TENANT_MODEL = "customers.Client" 
+
+# use hexxie.com that points back to locahost
+SERVICE_MAIN_DOMAIN = 'hexxie.com'
