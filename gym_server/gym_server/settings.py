@@ -37,24 +37,37 @@ SHARED_APPS = [
 
     'django.contrib.contenttypes',
 
+    #'django.contrib.admin',
     'django.contrib.admin',
+    'root_admin',
+
     'django.contrib.auth',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
     'authtools',
+    # gym users is here just for creating tables.
+    # won't be used as shared.
+    'gym_users',
+
 ]
 
 TENANT_APPS = [
     
     # The following Django contrib apps must be in TENANT_APPS
-    
     'django.contrib.contenttypes',
+
     # your tenant-specific apps
+    'django.contrib.admin',
+    'tenant_admin',
+    'django.contrib.sessions',
+    'django.contrib.messages',
     'django.contrib.auth',
+    'django.contrib.staticfiles',
     'authtools',
-    #'gym_users'
+    
+    'gym_users'
 ]    
 
 
@@ -154,6 +167,7 @@ STATIC_URL = '/static/'
 AUTH_USER_MODEL = 'authtools.User'
 
 TENANT_MODEL = "customers.Client" 
+PUBLIC_SCHEMA_URLCONF = 'gym_server.urls_public'
 
 # use hexxie.com that points back to locahost
 SERVICE_MAIN_DOMAIN = 'hexxie.com'
