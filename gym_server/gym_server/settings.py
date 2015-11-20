@@ -39,10 +39,11 @@ SHARED_APPS = [
 
     'django.contrib.admin',
     'django.contrib.auth',
-    
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'authtools',
 ]
 
 TENANT_APPS = [
@@ -51,6 +52,9 @@ TENANT_APPS = [
     
     'django.contrib.contenttypes',
     # your tenant-specific apps
+    'django.contrib.auth',
+    'authtools',
+    #'gym_users'
 ]    
 
 
@@ -146,6 +150,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
 STATIC_URL = '/static/'
+
+AUTH_USER_MODEL = 'authtools.User'
 
 TENANT_MODEL = "customers.Client" 
 
