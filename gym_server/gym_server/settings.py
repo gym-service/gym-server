@@ -168,6 +168,7 @@ AUTH_USER_MODEL = 'authtools.User'
 
 TENANT_MODEL = "customers.Client" 
 PUBLIC_SCHEMA_URLCONF = 'gym_server.urls_public'
+PUBLIC_SCHEMA_NAME = 'public'
 
 # use hexxie.com that points back to locahost
 SERVICE_MAIN_DOMAIN = 'hexxie.com'
