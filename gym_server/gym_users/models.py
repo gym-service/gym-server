@@ -1,7 +1,6 @@
 from __future__ import unicode_literals
 from django.db import models
 from django.conf import settings
-author = models.ForeignKey(settings.AUTH_USER_MODEL)
 
 SESSO_CHOICES = (
     ('M', 'Maschio'),
