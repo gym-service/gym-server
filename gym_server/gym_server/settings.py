@@ -67,7 +67,8 @@ TENANT_APPS = [
     'django.contrib.staticfiles',
     'authtools',
     
-    'gym_users'
+    'gym_users',
+    'gym_config',
 ]    
 
 
