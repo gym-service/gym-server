@@ -3,14 +3,14 @@ from tenant_schemas.utils import tenant_context
 
 
 def create_superuser(tenant, email):
-    
+    #raise Exception(email)
     with tenant_context(tenant):
         USER_MODEL = get_user_model()
         # Create a superuser for the given tenant
         # we set a dummy password for now ...
         # we should also send an activation mail, as we set no password
         USER_MODEL.objects.create_superuser(email=email, password="admin123")
-
+    
 
 def create_or_update_superuser(tenant, old_email, email):
     
