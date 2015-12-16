@@ -14,6 +14,7 @@ class BaseContent(models.Model):
     titolo = models.CharField(max_length=80, null=False)
     sottotitolo = models.CharField(max_length=80, null=True, blank=True)
     descrizione = models.CharField(max_length=2000, null=True, blank=True)
+    contenuto = models.TextField(max_length=2000, null=True, blank=True)
     author = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -57,17 +58,44 @@ class Press(BaseContent):
     data = models.DateField(null=True, blank=True)
 
     class Meta:
-      verbose_name = "Articolo"
-      verbose_name_plural = "Articoli"
+      verbose_name = "Articolo press"
+      verbose_name_plural = "Articoli press"
 
 
 class Alert(BaseContent):
-    
+
     data = models.DateField(null=True, blank=True)
 
     class Meta:
       verbose_name = "Comunicazione"
       verbose_name_plural = "Comunicazioni"
 
+
+class Video(BaseContent):
+    
+    data = models.DateField(null=True, blank=True)
+
+    class Meta:
+      verbose_name = "Filmato video"
+      verbose_name_plural = "Filmati video"
+
+
+class Gallery(BaseContent):
+
+    data = models.DateField(null=True, blank=True)
+
+    class Meta:
+        verbose_name = "Galleria multimediale"
+        verbose_name_plural = "Gallerie multimediali"
+
+
+class Immaginigallerie(models.Model):
+    
+    galleria = models.ForeignKey(Gallery, null=True, blank=True)
+    immmagine = models.ImageField(verbose_name='Immagine',upload_to="immagini")
+
+    class Meta:
+      verbose_name = "Immagine"
+      verbose_name_plural = "Immagini"
 
 
