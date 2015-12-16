@@ -47,6 +47,7 @@ SHARED_APPS = [
     'django.contrib.staticfiles',
 
     'authtools',
+    'rest_framework',
     # gym users is here just for creating tables.
     # won't be used as shared.
     'gym_users'
@@ -65,6 +66,7 @@ TENANT_APPS = [
     'django.contrib.auth',
     'django.contrib.staticfiles',
     'authtools',
+    'rest_framework',
     
     'gym_users',
     'gym_config',

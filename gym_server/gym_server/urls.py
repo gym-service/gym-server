@@ -21,4 +21,5 @@ from tenant_admin.admin import admin_site
 urlpatterns = [
     url(r'^admin/', admin_site.urls),
     url(r'^accounts/', include('authtools.urls')),
+    url(r'^api/contents/', include('gym_contents.urls')),
 ]
