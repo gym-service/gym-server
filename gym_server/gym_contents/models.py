@@ -2,6 +2,11 @@ from __future__ import unicode_literals
 from django.conf import settings
 from django.db import models
 
+STATO_CHOICES = [
+    [0, 'Non pubblicato'],
+    [1, 'In prova'],
+    [2, 'Pubblicato']
+]
 
 class BaseContent(models.Model):
 
@@ -11,6 +16,7 @@ class BaseContent(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+    stato = models.IntegerField(choices = STATO_CHOICES, default=0, blank=True)
 
     class Meta:
         abstract = True
