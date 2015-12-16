@@ -124,7 +124,7 @@ DATABASES = {
 
 try:
     import localsettings
-    DATABASES = localsettings.databases
+    DATABASES = localsettings.DATABASES
 except:
     pass
 
