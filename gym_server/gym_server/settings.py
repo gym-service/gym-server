@@ -122,19 +122,13 @@ DATABASES = {
     }
 }
 
-# Davide - Aggiunta temporanea per beccare db - Da Rimuovere ####
-import platform
-if platform.node().upper() == 'DAVIDEPC':
-    DATABASES = {
-        'default': {
-            'ENGINE': 'tenant_schemas.postgresql_backend',
-            'NAME': 'gym',
-            'USER' : 'gymuser',
-            'PASSWORD' : 'S0M3L1KEiTH0t01',
-            'HOST': '127.0.0.5', 
-            'PORT': '5432',        
-        }
-    } 
+try:
+    import localsettings
+    DATABASES = localsettings.databases
+except:
+    pass
+
+    
 ################################################
 
 DATABASE_ROUTERS = (
