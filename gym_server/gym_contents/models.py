@@ -1,6 +1,9 @@
 from __future__ import unicode_literals
 from django.conf import settings
 from django.db import models
+# -- Clubs -------------------------------------
+from gym_clubs.models import Club
+
 
 STATO_CHOICES = [
     [0, 'Non pubblicato'],
@@ -21,6 +24,7 @@ class BaseContent(models.Model):
     stato = models.IntegerField(choices = STATO_CHOICES, default=0, blank=True)
     promosso = models.BooleanField(blank=True, default=False)
     url = models.URLField(blank=True, null=True)
+    club = models.ManyToManyField(Club)
 
     class Meta:
         abstract = True

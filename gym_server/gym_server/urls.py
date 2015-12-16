@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^admin/', admin_site.urls),
     url(r'^accounts/', include('authtools.urls')),
     url(r'^api/contents/', include('gym_contents.urls')),
+    url(r'^api/clubs/', include('gym_clubs.urls')),    
 ]

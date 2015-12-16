@@ -71,6 +71,7 @@ TENANT_APPS = [
     'gym_users',
     'gym_config',
     'gym_contents',
+    'gym_clubs',
 ]    
 
 
