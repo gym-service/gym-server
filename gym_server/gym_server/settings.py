@@ -50,6 +50,7 @@ SHARED_APPS = [
     # gym users is here just for creating tables.
     # won't be used as shared.
     'gym_users',
+    'gym_contents',
 
 ]
 
