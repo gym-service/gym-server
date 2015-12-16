@@ -32,3 +32,9 @@ class Evento(BaseContent):
     data = models.DateField(null=True, blank=True)
     luogo = models.CharField(max_length=30, null=True, blank=True)
     descrizione_luogo = models.TextField(null=True, blank=True)
+
+class Notizia(BaseContent):
+
+    immagine = models.ImageField(null=True, blank=True, upload_to="immagini")
+    allegato = models.FileField(null=True, blank=True, upload_to="allegati")
+    data = models.DateField(null=True, blank=True)
