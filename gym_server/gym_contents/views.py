@@ -1,6 +1,6 @@
 from rest_framework.viewsets import ModelViewSet
-from .serializers import EventoSerializer, NotiziaSerializer, PressSerializer
-from .models import Evento, Notizia, Press
+from .serializers import EventoSerializer, NotiziaSerializer, PressSerializer, AlertSerializer
+from .models import Evento, Notizia, Press, Alert
 
 class ModelViewSetWithStato(ModelViewSet):
     def get_queryset(self):
@@ -22,4 +22,7 @@ class PressViewSet(ModelViewSetWithStato):
     serializer_class = PressSerializer
     queryset = Press.objects.all()
 
+class AlertViewSet(ModelViewSetWithStato):
+    serializer_class = AlertSerializer
+    queryset = Alert.objects.all()
 

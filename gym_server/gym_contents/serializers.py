@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer
-from .models import Evento, Notizia, Press
+from .models import Evento, Notizia, Press, Alert
 
 
 class EventoSerializer(ModelSerializer):
@@ -13,3 +13,7 @@ class NotiziaSerializer(ModelSerializer):
 class PressSerializer(ModelSerializer):
     class Meta:
         model = Press
+
+class AlertSerializer(ModelSerializer):
+    class Meta:
+        model = Alert

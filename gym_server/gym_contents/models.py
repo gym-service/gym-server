@@ -60,3 +60,14 @@ class Press(BaseContent):
       verbose_name = "Articolo"
       verbose_name_plural = "Articoli"
 
+
+class Alert(BaseContent):
+    
+    data = models.DateField(null=True, blank=True)
+
+    class Meta:
+      verbose_name = "Comunicazione"
+      verbose_name_plural = "Comunicazioni"
+
+
+
