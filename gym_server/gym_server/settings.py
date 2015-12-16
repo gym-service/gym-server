@@ -49,9 +49,7 @@ SHARED_APPS = [
     'authtools',
     # gym users is here just for creating tables.
     # won't be used as shared.
-    'gym_users',
-    'gym_contents',
-
+    'gym_users'
 ]
 
 TENANT_APPS = [
@@ -70,6 +68,7 @@ TENANT_APPS = [
     
     'gym_users',
     'gym_config',
+    'gym_contents',
 ]    
 
 
