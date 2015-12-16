@@ -48,6 +48,7 @@ SHARED_APPS = [
 
     'authtools',
     'rest_framework',
+    'corsheaders',
     # gym users is here just for creating tables.
     # won't be used as shared.
     'gym_users'
@@ -67,6 +68,7 @@ TENANT_APPS = [
     'django.contrib.staticfiles',
     'authtools',
     'rest_framework',
+    'corsheaders',
     
     'gym_users',
     'gym_config',
@@ -83,6 +85,7 @@ MIDDLEWARE_CLASSES = [
 
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -184,3 +187,5 @@ PUBLIC_SCHEMA_NAME = 'public'
 
 # use hexxie.com that points back to locahost
 SERVICE_MAIN_DOMAIN = 'hexxie.com'
+
+CORS_ORIGIN_ALLOW_ALL = True
