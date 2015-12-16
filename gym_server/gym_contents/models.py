@@ -33,8 +33,30 @@ class Evento(BaseContent):
     luogo = models.CharField(max_length=30, null=True, blank=True)
     descrizione_luogo = models.TextField(null=True, blank=True)
 
+    class Meta:
+      verbose_name = "Evento"
+      verbose_name_plural = "Eventi"
+
+
 class Notizia(BaseContent):
 
     immagine = models.ImageField(null=True, blank=True, upload_to="immagini")
     allegato = models.FileField(null=True, blank=True, upload_to="allegati")
     data = models.DateField(null=True, blank=True)
+
+    class Meta:
+      verbose_name = "Notizia"
+      verbose_name_plural = "Notizie"
+
+
+
+class Press(BaseContent):
+
+    immagine = models.ImageField(null=True, blank=True, upload_to="immagini")
+    allegato = models.FileField(null=True, blank=True, upload_to="allegati")
+    data = models.DateField(null=True, blank=True)
+
+    class Meta:
+      verbose_name = "Articolo"
+      verbose_name_plural = "Articoli"
+
